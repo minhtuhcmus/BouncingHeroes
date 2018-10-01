@@ -18,6 +18,9 @@ public class InputControl : MonoBehaviour {
     private bool isFly;
     private bool isClick;
     private Vector3 direction;
+	
+	
+	public static bool gameOver = false;
     void Start()
     {
 
@@ -37,7 +40,9 @@ public class InputControl : MonoBehaviour {
 
     void OnMouseDown()
     {
-        
+        if(gameOver)
+			return;
+
         isClick = true;
         orgPoint = Input.mousePosition;
         screenPoint = Camera.main.WorldToScreenPoint(gameObject.transform.position);
@@ -49,6 +54,9 @@ public class InputControl : MonoBehaviour {
 
     void OnMouseDrag()
     {
+		if(gameOver)
+			return;
+
         character.rotation = Quaternion.Inverse(Rotation());
         direction = orgPoint - Input.mousePosition;
         Launch();
@@ -56,6 +64,9 @@ public class InputControl : MonoBehaviour {
 
     private void OnMouseUp()
     {
+		if(gameOver)
+			return;
+
         transform.localScale = new Vector3(1, 1, 1);
         transform.localPosition = Vector3.zero;
 
