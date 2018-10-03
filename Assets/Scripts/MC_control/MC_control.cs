@@ -33,10 +33,10 @@ public class MC_control : MonoBehaviour {
 		
 	}
 	
-	public void lostHP(float dame)
+	public void lostHP(Collision2D other, float DameRate)
 	{
 		Debug.Log("vao MC control");
-		if(hpBar.GetComponent<HPbar>().lostHP(dame) == 0)
+		if(hpBar.GetComponent<HPbar>().lostHP(other,DameRate) == 0)
 			gameOver();
 		
 	}

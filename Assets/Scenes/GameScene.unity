@@ -126,7 +126,7 @@ GameObject:
   - component: {fileID: 23681378}
   m_Layer: 0
   m_Name: Saw (2)
-  m_TagString: Untagged
+  m_TagString: saw
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -144,18 +144,21 @@ Transform:
   m_Father: {fileID: 2047786963}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &23681378
-BoxCollider:
+--- !u!58 &23681378
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 23681376}
+  m_Enabled: 1
+  m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 1.46, y: 1.58, z: 0.2}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 0.945
 --- !u!212 &23681379
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -227,7 +230,7 @@ GameObject:
   - component: {fileID: 90704411}
   m_Layer: 0
   m_Name: Saw (5)
-  m_TagString: Untagged
+  m_TagString: saw
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -245,18 +248,21 @@ Transform:
   m_Father: {fileID: 2047786963}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &90704411
-BoxCollider:
+--- !u!58 &90704411
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 90704409}
+  m_Enabled: 1
+  m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 1.46, y: 1.58, z: 0.2}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 0.945
 --- !u!212 &90704412
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -405,6 +411,7 @@ MonoBehaviour:
   hpBar: {fileID: 133599560}
   max_hp: 100
   sizeMax: {x: 0, y: 0}
+  dameSaw: 10
 --- !u!1 &210588011
 GameObject:
   m_ObjectHideFlags: 0
@@ -471,7 +478,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 018fcf896c223e445b6206e3f7561aed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DameRate: 1.5
+  DameRate: 4
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -672,8 +679,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 679646505}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.024000004, y: 0.016000003, z: 0}
-  m_LocalScale: {x: 1.2422796, y: 1.3839129, z: 1}
+  m_LocalPosition: {x: -0.032, y: 0.016000003, z: 0}
+  m_LocalScale: {x: 1.7716854, y: 1.3839129, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
@@ -741,23 +748,26 @@ GameObject:
   - component: {fileID: 693695002}
   m_Layer: 0
   m_Name: Saw (0)
-  m_TagString: Untagged
+  m_TagString: saw
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!65 &693695002
-BoxCollider:
+--- !u!58 &693695002
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 693695001}
+  m_Enabled: 1
+  m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 1.46, y: 1.58, z: 0.2}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 0.945
 --- !u!212 &693695003
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -926,7 +936,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36150a4b51d4db443af02d305ffb2acc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DameRate: 0
+  DameRate: 1
 --- !u!1 &949308986
 GameObject:
   m_ObjectHideFlags: 0
@@ -940,7 +950,7 @@ GameObject:
   - component: {fileID: 949308988}
   m_Layer: 0
   m_Name: Saw (4)
-  m_TagString: Untagged
+  m_TagString: saw
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -958,18 +968,21 @@ Transform:
   m_Father: {fileID: 2047786963}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &949308988
-BoxCollider:
+--- !u!58 &949308988
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 949308986}
+  m_Enabled: 1
+  m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 1.46, y: 1.58, z: 0.2}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 0.945
 --- !u!212 &949308989
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1059,7 +1072,7 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 2
-  m_AngularDrag: 3
+  m_AngularDrag: 0
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
@@ -1123,7 +1136,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a9909229a8c59245967d13a3b652b3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GameoverBtn: {fileID: 0}
+  GameoverBtn: {fileID: 1920113506}
   hpBar: {fileID: 133599558}
 --- !u!4 &954192976
 Transform:
@@ -1156,7 +1169,7 @@ GameObject:
   - component: {fileID: 1071662108}
   m_Layer: 0
   m_Name: Saw (8)
-  m_TagString: Untagged
+  m_TagString: saw
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1174,18 +1187,21 @@ Transform:
   m_Father: {fileID: 2047786963}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1071662108
-BoxCollider:
+--- !u!58 &1071662108
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1071662106}
+  m_Enabled: 1
+  m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 1.46, y: 1.58, z: 0.2}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 0.945
 --- !u!212 &1071662109
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1257,7 +1273,7 @@ GameObject:
   - component: {fileID: 1150595992}
   m_Layer: 0
   m_Name: Saw (1)
-  m_TagString: Untagged
+  m_TagString: saw
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1275,18 +1291,21 @@ Transform:
   m_Father: {fileID: 2047786963}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1150595992
-BoxCollider:
+--- !u!58 &1150595992
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1150595990}
+  m_Enabled: 1
+  m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 1.46, y: 1.58, z: 0.2}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 0.945
 --- !u!212 &1150595993
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1433,7 +1452,7 @@ GameObject:
   - component: {fileID: 1208317856}
   m_Layer: 0
   m_Name: Saw (3)
-  m_TagString: Untagged
+  m_TagString: saw
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1451,18 +1470,21 @@ Transform:
   m_Father: {fileID: 2047786963}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1208317856
-BoxCollider:
+--- !u!58 &1208317856
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1208317854}
+  m_Enabled: 1
+  m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 1.46, y: 1.58, z: 0.2}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 0.945
 --- !u!212 &1208317857
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1613,7 +1635,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72a73e09a3c23fb409b80d0fb49fd34b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DameRate: 1
+  DameRate: 2
 --- !u!1 &1504695991
 GameObject:
   m_ObjectHideFlags: 0
@@ -1683,7 +1705,7 @@ GameObject:
   - component: {fileID: 1521644270}
   m_Layer: 0
   m_Name: Saw (6)
-  m_TagString: Untagged
+  m_TagString: saw
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1701,18 +1723,21 @@ Transform:
   m_Father: {fileID: 2047786963}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1521644270
-BoxCollider:
+--- !u!58 &1521644270
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1521644268}
+  m_Enabled: 1
+  m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 1.46, y: 1.58, z: 0.2}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 0.945
 --- !u!212 &1521644271
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1846,7 +1871,7 @@ GameObject:
   - component: {fileID: 1754467962}
   m_Layer: 0
   m_Name: Saw (7)
-  m_TagString: Untagged
+  m_TagString: saw
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1864,18 +1889,21 @@ Transform:
   m_Father: {fileID: 2047786963}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1754467962
-BoxCollider:
+--- !u!58 &1754467962
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1754467960}
+  m_Enabled: 1
+  m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 1.46, y: 1.58, z: 0.2}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 0.945
 --- !u!212 &1754467963
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2062,7 +2090,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -115.5, y: -133.5}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1920113508
@@ -2103,7 +2131,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1920113509}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 954192973}
+        m_MethodName: tryAgain
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1920113509

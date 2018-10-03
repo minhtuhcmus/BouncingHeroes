@@ -8,6 +8,9 @@ public class HPbar : MonoBehaviour {
 	public float max_hp;
 	private float hp;
 	public  Vector2 sizeMax;
+	
+	
+	public float dameSaw =1;
 	// Use this for initialization
 	void Start () {
 		hp = max_hp;
@@ -16,12 +19,20 @@ public class HPbar : MonoBehaviour {
 		//hpBar.size= new Vector2(0, sizeMax.y);
 	}
 	
+	private float getDame(Collision2D other){
+		
+		if(other.collider.tag == "saw")
+			return dameSaw;
+		return 0f;
+	}
 
 	
-	public float lostHP(float dame)
+	public float lostHP(Collision2D other, float DameRate)
 	{
-		Debug.Log("da vao hpBar");
-		hp -= dame;
+		float dame=getDame(other);
+		
+		
+		hp -= dame*DameRate;
 		
 		if(hp < 0)
 			hp =0;
