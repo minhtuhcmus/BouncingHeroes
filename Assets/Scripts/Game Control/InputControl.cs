@@ -58,6 +58,8 @@ public class InputControl : MonoBehaviour {
 			return;
 
         character.rotation = Quaternion.Inverse(Rotation());
+		//character.rotation = Rotation();
+		
         direction = orgPoint - Input.mousePosition;
         Launch();
     }
@@ -93,8 +95,8 @@ public class InputControl : MonoBehaviour {
         Vector3 mousePos = Input.mousePosition - new Vector3(375, 1334/2);
         var worldToPixels = ((Screen.height / 2.0f) / Camera.main.orthographicSize);
         float distance = Vector3.Distance(mousePos, character.position* worldToPixels) /worldToPixels;
-        Debug.Log(mousePos);
-        Debug.Log(character.position);
+        //Debug.Log(mousePos);
+       // Debug.Log(character.position);
         if (distance < settings.maxDistance / worldToPixels)
         {
             forceIndex = Mathf.RoundToInt(distance / (settings.distancePerPart / worldToPixels)) - 1;
