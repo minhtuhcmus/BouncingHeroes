@@ -81,6 +81,8 @@ public class Saw : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         if (isEnable == false) return;
+
+        Debug.Log("Test Merge");
         
         transform.Rotate(new Vector3(0.0f,0.0f,2.0f), 3600.0f * Time.deltaTime);
 		if(isRunToA)
