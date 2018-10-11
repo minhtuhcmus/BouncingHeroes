@@ -38,6 +38,7 @@ public class SubStage_Data : ScriptableObject {
 					listOfSaws[i].isOK = true;
 				}
 			}
+			
 			calculate = false;
 		}
 	}

@@ -9,7 +9,7 @@ public class SawSpawner : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         listOfSaws = subStage.listOfSaws;
-        for(int i = 0; i < listOfSaws.Count;  i++)
+        for(int i = 0; i <= listOfSaws.Count;  i++)
         {
             Saw newSaw = GameObject.Find("Saw (" + i + ")").GetComponent<Saw>();
             newSaw.intit(listOfSaws[i].minY, listOfSaws[i].maxY, listOfSaws[i].range, (int)listOfSaws[i].side);
