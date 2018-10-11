@@ -13,8 +13,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   screenWidth: 750
   screenHeight: 1334
-  safeZoneTop: 100
-  safeZoneBottom: 100
   maxDistance: 600
   maxForce: 1000
   distancePerPart: 75

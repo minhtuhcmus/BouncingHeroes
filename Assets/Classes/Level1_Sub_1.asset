@@ -14,10 +14,10 @@ MonoBehaviour:
   minDistanceBetween2Saws: 200
   calculate: 0
   listOfSaws:
-  - minY: 465
-    maxY: 1004
+  - minY: 300
+    maxY: 300
     side: 0
-    range: 800
+    range: 300
     isOK: 1
   - minY: 900
     maxY: 900
