@@ -88,7 +88,7 @@ public class Saw : MonoBehaviour {
             //Debug.LogWarning("MoveToA");
             int layer_Mark = 1 << LayerMask.NameToLayer("Wall");
             if(hit = Physics2D.Raycast(new Vector2(0, transform.position.y), new Vector2(this.side, 0), 10, layer_Mark)) {
-                // Debug.Log(hit.transform.name);
+                Debug.Log(hit.transform.name);
                 transform.position = Vector3.Lerp(transform.position, new Vector3(hit.point.x, pos_A.y, pos_A.z), speed * Time.deltaTime);
                 transform.position = new Vector2(hit.point.x, transform.position.y);
             }
