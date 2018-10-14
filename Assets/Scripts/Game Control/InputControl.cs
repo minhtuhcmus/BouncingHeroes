@@ -18,7 +18,7 @@ public class InputControl : MonoBehaviour {
     private bool isFly;
     private bool isClick;
     private Vector3 direction;
-	
+	// Minh cmt
 	
 	public static bool gameOver = false;
     void Start()
