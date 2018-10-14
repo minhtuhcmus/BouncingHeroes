@@ -19,7 +19,7 @@ public class InputControl : MonoBehaviour {
     private bool isClick;
     private Vector3 direction;
 	#Khoa CMT
-	
+	#KHOA CMTTTT
 	public static bool gameOver = false;
     void Start()
     {
