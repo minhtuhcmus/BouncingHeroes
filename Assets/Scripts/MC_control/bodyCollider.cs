@@ -7,6 +7,8 @@ public class bodyCollider : MonoBehaviour {
 	public float DameRate = 2.0f;
 	private void OnCollisionEnter2D(Collision2D other)
 	{
-			MC_control.instance.lostHP (other,DameRate);
+		if(MC_control.instance.startBlinking)
+			return;
+		MC_control.instance.lostHP (other,DameRate);
 	}
 }
