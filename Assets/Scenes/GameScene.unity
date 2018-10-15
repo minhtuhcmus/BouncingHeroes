@@ -206,9 +206,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hpBar: {fileID: 133599560}
-  max_hp: 100
+  max_hp: 5
   sizeMax: {x: 0, y: 0}
-  dameSaw: 10
+  dameSaw: 1
 --- !u!1001 &162991297
 Prefab:
   m_ObjectHideFlags: 0
@@ -340,7 +340,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 210588011}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 7bd4f96ace0e670429a95febeac4c180, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -758,6 +758,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GameoverBtn: {fileID: 1920113506}
   hpBar: {fileID: 133599558}
+  headCollider: {fileID: 911877536}
+  bodyCollider: {fileID: 1430783608}
+  backCollider: {fileID: 210588013}
+  headBouncing: 1
+  bodyBouncing: 0.5
+  backBouncing: 0.5
+  spriteBlinkingTimer: 0
+  spriteBlinkingMiniDuration: 0.2
+  spriteBlinkingTotalTimer: 0
+  spriteBlinkingTotalDuration: 2
+  startBlinking: 0
 --- !u!4 &954192976
 Transform:
   m_ObjectHideFlags: 0
