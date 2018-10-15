@@ -9,7 +9,6 @@ public class HPbar : MonoBehaviour {
 	private float hp;
 	public  Vector2 sizeMax;
 	
-
 	
 	public float dameSaw =1;
 	// Use this for initialization
@@ -22,12 +21,8 @@ public class HPbar : MonoBehaviour {
 	
 	private float getDame(Collision2D other){
 		
-		if(other.collider.tag == "saw"){
-			
-			MC_control.instance.hurt();
+		if(other.collider.tag == "saw")
 			return dameSaw;
-		}
-			
 		return 0f;
 	}
 
