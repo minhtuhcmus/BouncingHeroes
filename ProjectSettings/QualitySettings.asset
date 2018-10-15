@@ -4,7 +4,11 @@
 QualitySettings:
   m_ObjectHideFlags: 0
   serializedVersion: 5
+<<<<<<< HEAD
   m_CurrentQuality: 3
+=======
+  m_CurrentQuality: 5
+>>>>>>> master
   m_QualitySettings:
   - serializedVersion: 2
     name: Very Low
@@ -29,6 +33,15 @@ QualitySettings:
     vSyncCount: 0
     lodBias: 0.3
     maximumLODLevel: 0
+<<<<<<< HEAD
+=======
+    streamingMipmapsActive: 0
+    streamingMipmapsAddAllCameras: 1
+    streamingMipmapsMemoryBudget: 512
+    streamingMipmapsRenderersPerFrame: 512
+    streamingMipmapsMaxLevelReduction: 2
+    streamingMipmapsMaxFileIORequests: 1024
+>>>>>>> master
     particleRaycastBudget: 4
     asyncUploadTimeSlice: 2
     asyncUploadBufferSize: 4
@@ -57,6 +70,15 @@ QualitySettings:
     vSyncCount: 0
     lodBias: 0.4
     maximumLODLevel: 0
+<<<<<<< HEAD
+=======
+    streamingMipmapsActive: 0
+    streamingMipmapsAddAllCameras: 1
+    streamingMipmapsMemoryBudget: 512
+    streamingMipmapsRenderersPerFrame: 512
+    streamingMipmapsMaxLevelReduction: 2
+    streamingMipmapsMaxFileIORequests: 1024
+>>>>>>> master
     particleRaycastBudget: 16
     asyncUploadTimeSlice: 2
     asyncUploadBufferSize: 4
@@ -65,7 +87,11 @@ QualitySettings:
   - serializedVersion: 2
     name: Medium
     pixelLightCount: 1
+<<<<<<< HEAD
     shadows: 0
+=======
+    shadows: 1
+>>>>>>> master
     shadowResolution: 0
     shadowProjection: 1
     shadowCascades: 1
@@ -76,7 +102,11 @@ QualitySettings:
     shadowmaskMode: 0
     blendWeights: 2
     textureQuality: 0
+<<<<<<< HEAD
     anisotropicTextures: 0
+=======
+    anisotropicTextures: 1
+>>>>>>> master
     antiAliasing: 0
     softParticles: 0
     softVegetation: 0
@@ -85,6 +115,15 @@ QualitySettings:
     vSyncCount: 1
     lodBias: 0.7
     maximumLODLevel: 0
+<<<<<<< HEAD
+=======
+    streamingMipmapsActive: 0
+    streamingMipmapsAddAllCameras: 1
+    streamingMipmapsMemoryBudget: 512
+    streamingMipmapsRenderersPerFrame: 512
+    streamingMipmapsMaxLevelReduction: 2
+    streamingMipmapsMaxFileIORequests: 1024
+>>>>>>> master
     particleRaycastBudget: 64
     asyncUploadTimeSlice: 2
     asyncUploadBufferSize: 4
@@ -93,7 +132,11 @@ QualitySettings:
   - serializedVersion: 2
     name: High
     pixelLightCount: 2
+<<<<<<< HEAD
     shadows: 0
+=======
+    shadows: 2
+>>>>>>> master
     shadowResolution: 1
     shadowProjection: 1
     shadowCascades: 2
@@ -104,6 +147,7 @@ QualitySettings:
     shadowmaskMode: 1
     blendWeights: 2
     textureQuality: 0
+<<<<<<< HEAD
     anisotropicTextures: 0
     antiAliasing: 0
     softParticles: 0
@@ -113,6 +157,23 @@ QualitySettings:
     vSyncCount: 1
     lodBias: 1
     maximumLODLevel: 0
+=======
+    anisotropicTextures: 1
+    antiAliasing: 0
+    softParticles: 0
+    softVegetation: 1
+    realtimeReflectionProbes: 1
+    billboardsFaceCameraPosition: 1
+    vSyncCount: 1
+    lodBias: 1
+    maximumLODLevel: 0
+    streamingMipmapsActive: 0
+    streamingMipmapsAddAllCameras: 1
+    streamingMipmapsMemoryBudget: 512
+    streamingMipmapsRenderersPerFrame: 512
+    streamingMipmapsMaxLevelReduction: 2
+    streamingMipmapsMaxFileIORequests: 1024
+>>>>>>> master
     particleRaycastBudget: 256
     asyncUploadTimeSlice: 2
     asyncUploadBufferSize: 4
@@ -121,7 +182,11 @@ QualitySettings:
   - serializedVersion: 2
     name: Very High
     pixelLightCount: 3
+<<<<<<< HEAD
     shadows: 0
+=======
+    shadows: 2
+>>>>>>> master
     shadowResolution: 2
     shadowProjection: 1
     shadowCascades: 2
@@ -132,6 +197,7 @@ QualitySettings:
     shadowmaskMode: 1
     blendWeights: 4
     textureQuality: 0
+<<<<<<< HEAD
     anisotropicTextures: 0
     antiAliasing: 0
     softParticles: 0
@@ -141,6 +207,23 @@ QualitySettings:
     vSyncCount: 1
     lodBias: 1.5
     maximumLODLevel: 0
+=======
+    anisotropicTextures: 2
+    antiAliasing: 2
+    softParticles: 1
+    softVegetation: 1
+    realtimeReflectionProbes: 1
+    billboardsFaceCameraPosition: 1
+    vSyncCount: 1
+    lodBias: 1.5
+    maximumLODLevel: 0
+    streamingMipmapsActive: 0
+    streamingMipmapsAddAllCameras: 1
+    streamingMipmapsMemoryBudget: 512
+    streamingMipmapsRenderersPerFrame: 512
+    streamingMipmapsMaxLevelReduction: 2
+    streamingMipmapsMaxFileIORequests: 1024
+>>>>>>> master
     particleRaycastBudget: 1024
     asyncUploadTimeSlice: 2
     asyncUploadBufferSize: 4
@@ -149,8 +232,13 @@ QualitySettings:
   - serializedVersion: 2
     name: Ultra
     pixelLightCount: 4
+<<<<<<< HEAD
     shadows: 0
     shadowResolution: 0
+=======
+    shadows: 2
+    shadowResolution: 2
+>>>>>>> master
     shadowProjection: 1
     shadowCascades: 4
     shadowDistance: 150
@@ -160,6 +248,7 @@ QualitySettings:
     shadowmaskMode: 1
     blendWeights: 4
     textureQuality: 0
+<<<<<<< HEAD
     anisotropicTextures: 0
     antiAliasing: 0
     softParticles: 0
@@ -169,6 +258,23 @@ QualitySettings:
     vSyncCount: 1
     lodBias: 2
     maximumLODLevel: 0
+=======
+    anisotropicTextures: 2
+    antiAliasing: 2
+    softParticles: 1
+    softVegetation: 1
+    realtimeReflectionProbes: 1
+    billboardsFaceCameraPosition: 1
+    vSyncCount: 1
+    lodBias: 2
+    maximumLODLevel: 0
+    streamingMipmapsActive: 0
+    streamingMipmapsAddAllCameras: 1
+    streamingMipmapsMemoryBudget: 512
+    streamingMipmapsRenderersPerFrame: 512
+    streamingMipmapsMaxLevelReduction: 2
+    streamingMipmapsMaxFileIORequests: 1024
+>>>>>>> master
     particleRaycastBudget: 4096
     asyncUploadTimeSlice: 2
     asyncUploadBufferSize: 4
@@ -179,12 +285,18 @@ QualitySettings:
     Nintendo 3DS: 5
     Nintendo Switch: 5
     PS4: 5
+<<<<<<< HEAD
     PSM: 5
     PSP2: 2
     Standalone: 5
     Tizen: 2
     WebGL: 3
     WiiU: 5
+=======
+    PSP2: 2
+    Standalone: 5
+    WebGL: 3
+>>>>>>> master
     Windows Store Apps: 5
     XboxOne: 5
     iPhone: 2

@@ -18,8 +18,6 @@ public class InputControl : MonoBehaviour {
     private bool isFly;
     private bool isClick;
     private Vector3 direction;
-	
-	
 	public static bool gameOver = false;
     void Start()
     {

@@ -10,6 +10,12 @@ public class _3CSettings : ScriptableObject {
     [HideInInspector]
     public int screenHeight = 1334;
 
+    [Header("Safe Zone")]
+    [SerializeField]
+    public float safeZoneTop = 100.0f;
+    [SerializeField]
+    public float safeZoneBottom = 200.0f;
+
     [Header("Max Distance")]
     [SerializeField]
     public float maxDistance = 300f;
