@@ -294,6 +294,10 @@ Prefab:
       propertyPath: m_Name
       value: Saw (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1214660776911290, guid: f47fb399295d5c34fbca8701d3d7510e, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f47fb399295d5c34fbca8701d3d7510e, type: 2}
   m_IsPrefabAsset: 0
@@ -416,6 +420,10 @@ Prefab:
     - target: {fileID: 1214660776911290, guid: f47fb399295d5c34fbca8701d3d7510e, type: 2}
       propertyPath: m_Name
       value: Saw (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1214660776911290, guid: f47fb399295d5c34fbca8701d3d7510e, type: 2}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f47fb399295d5c34fbca8701d3d7510e, type: 2}
@@ -544,6 +552,10 @@ Prefab:
     - target: {fileID: 1214660776911290, guid: f47fb399295d5c34fbca8701d3d7510e, type: 2}
       propertyPath: m_Name
       value: Saw (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1214660776911290, guid: f47fb399295d5c34fbca8701d3d7510e, type: 2}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f47fb399295d5c34fbca8701d3d7510e, type: 2}
@@ -776,7 +788,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 954192970}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.673, y: 0.004, z: 0}
+  m_LocalPosition: {x: -0.507, y: 0.283, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1504695992}
@@ -904,6 +916,10 @@ Prefab:
     - target: {fileID: 1214660776911290, guid: f47fb399295d5c34fbca8701d3d7510e, type: 2}
       propertyPath: m_Name
       value: Saw (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1214660776911290, guid: f47fb399295d5c34fbca8701d3d7510e, type: 2}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f47fb399295d5c34fbca8701d3d7510e, type: 2}
@@ -1172,6 +1188,10 @@ Prefab:
       propertyPath: m_Name
       value: Saw (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 1214660776911290, guid: f47fb399295d5c34fbca8701d3d7510e, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f47fb399295d5c34fbca8701d3d7510e, type: 2}
   m_IsPrefabAsset: 0
@@ -1311,6 +1331,10 @@ Prefab:
     - target: {fileID: 1214660776911290, guid: f47fb399295d5c34fbca8701d3d7510e, type: 2}
       propertyPath: m_Name
       value: Saw (0)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1214660776911290, guid: f47fb399295d5c34fbca8701d3d7510e, type: 2}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f47fb399295d5c34fbca8701d3d7510e, type: 2}
@@ -1481,6 +1505,10 @@ Prefab:
       propertyPath: m_Name
       value: Saw (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 1214660776911290, guid: f47fb399295d5c34fbca8701d3d7510e, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f47fb399295d5c34fbca8701d3d7510e, type: 2}
   m_IsPrefabAsset: 0
@@ -1526,6 +1554,10 @@ Prefab:
     - target: {fileID: 1214660776911290, guid: f47fb399295d5c34fbca8701d3d7510e, type: 2}
       propertyPath: m_Name
       value: Saw (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1214660776911290, guid: f47fb399295d5c34fbca8701d3d7510e, type: 2}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f47fb399295d5c34fbca8701d3d7510e, type: 2}
@@ -1609,6 +1641,10 @@ Prefab:
     - target: {fileID: 1214660776911290, guid: f47fb399295d5c34fbca8701d3d7510e, type: 2}
       propertyPath: m_Name
       value: Saw (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1214660776911290, guid: f47fb399295d5c34fbca8701d3d7510e, type: 2}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f47fb399295d5c34fbca8701d3d7510e, type: 2}
