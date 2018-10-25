@@ -11,12 +11,9 @@ public class MC_control : MonoBehaviour {
 	public GameObject hpBar;
 	
 	public Collider2D headCollider;
-	public Collider2D bodyCollider;
-	public Collider2D backCollider;
-	
+
 	public float headBouncing;
-	public float bodyBouncing;
-	public float backBouncing;
+
 	
 	// Use this for initialization
 	public static MC_control instance;
@@ -37,7 +34,7 @@ public class MC_control : MonoBehaviour {
 	private Transform character;
 
 	void Start () {
-		resetBoucing(headBouncing,bodyBouncing,backBouncing);
+		resetBoucing(headBouncing);
 		
 		
 		rb2d = GetComponent<Rigidbody2D>();
@@ -103,10 +100,8 @@ public class MC_control : MonoBehaviour {
 		InputControl.gameOver=false;
 		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 	}
-	private void resetBoucing(float a, float b, float c){
-			headCollider.sharedMaterial.bounciness = a;
-			bodyCollider.sharedMaterial.bounciness = b;
-			backCollider.sharedMaterial.bounciness = c;
+	private void resetBoucing(float headBouncingNum){
+			headCollider.sharedMaterial.bounciness = headBouncingNum;
 	}
 	private void SpriteBlinkingEffect()
     {
@@ -119,10 +114,6 @@ public class MC_control : MonoBehaviour {
              spriteBlinkingTotalTimer = 0.0f;
              this.gameObject.GetComponent<SpriteRenderer> ().enabled = true;   // according to 
                       //your sprite
-			resetBoucing(headBouncing,bodyBouncing,backBouncing);
-					  
-					  
-			
              return;
         }
      
