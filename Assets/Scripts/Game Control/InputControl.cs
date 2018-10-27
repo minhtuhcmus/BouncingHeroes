@@ -18,12 +18,6 @@ public class InputControl : MonoBehaviour {
     private bool isFly;
     private bool isClick;
     private Vector3 direction;
-<<<<<<< HEAD
-	#Khoa CMT
-	#KHOA CMTTTT
-=======
-	
->>>>>>> master
 	public static bool gameOver = false;
     public bool m_bNeedToZoom = false;
     void Start()
@@ -86,6 +80,7 @@ public class InputControl : MonoBehaviour {
         
         Fly();
 
+        MC_control.instance.ArrowScaleBack();
         if(m_bNeedToZoom){
             CameraControl.instance.ZoomBack();
             m_bNeedToZoom = false;
@@ -117,7 +112,7 @@ public class InputControl : MonoBehaviour {
             }
             
         }
-
+        MC_control.instance.ArrowScale(distance, forceIndex);
         
         return 0.0f;
 
