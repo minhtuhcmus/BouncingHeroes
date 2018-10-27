@@ -80,6 +80,7 @@ public class InputControl : MonoBehaviour {
         
         Fly();
 
+        MC_control.instance.ArrowScaleBack();
         if(m_bNeedToZoom){
             CameraControl.instance.ZoomBack();
             m_bNeedToZoom = false;
@@ -111,7 +112,7 @@ public class InputControl : MonoBehaviour {
             }
             
         }
-
+        MC_control.instance.ArrowScale(distance, forceIndex);
         
         return 0.0f;
 

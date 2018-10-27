@@ -57,6 +57,19 @@ public class _3CSettings : ScriptableObject {
     [Header("Time Reach 0")]
     [SerializeField]
     public float timeReach0 = 3f;
+
+    [Header("Arrow Max Scale")]
+    [SerializeField]
+    public float arrowMaxScale = 0.650f;
+
+
+    [Header("Arrow Origin Scale X")]
+    [SerializeField]
+    public float arrowOriScaleX = 0.779436f;
+
+    [Header("Arrow Origin Scale Y")]
+    [SerializeField]
+    public float arrowOriScaleY = 0.32776f;
     // Use this for initialization
     void Start () {
 		

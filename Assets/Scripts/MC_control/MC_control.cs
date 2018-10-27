@@ -9,6 +9,11 @@ public class MC_control : MonoBehaviour {
 
 	public GameObject GameoverBtn;
 	public GameObject hpBar;
+	public GameObject arrow;
+	public Collider2D headCollider;
+
+	public float headBouncing;
+
 	
 	public Collider2D headCollider;
 
@@ -35,8 +40,6 @@ public class MC_control : MonoBehaviour {
 
 	void Start () {
 		resetBoucing(headBouncing);
-		
-		
 		rb2d = GetComponent<Rigidbody2D>();
 		character = GetComponent<Transform>();
 		GameoverBtn.SetActive (false);
@@ -100,6 +103,10 @@ public class MC_control : MonoBehaviour {
 		InputControl.gameOver=false;
 		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 	}
+
+	private void resetBoucing(float headBouncingNum){
+			headCollider.sharedMaterial.bounciness = headBouncingNum;
+	}
 	private void resetBoucing(float headBouncingNum){
 			headCollider.sharedMaterial.bounciness = headBouncingNum;
 	}
@@ -128,5 +135,13 @@ public class MC_control : MonoBehaviour {
 				this.gameObject.GetComponent<SpriteRenderer> ().enabled = true;   //make changes
 			}
 		}
+	}
+
+	public void ArrowScale(float fDistance, int iForcePart){
+		arrow.GetComponent<Arrow>().Scale(fDistance, iForcePart);
+	}
+
+	public void ArrowScaleBack(){
+		arrow.GetComponent<Arrow>().ScaleBack();
 	}
 }
