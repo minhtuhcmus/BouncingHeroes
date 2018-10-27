@@ -15,6 +15,11 @@ public class MC_control : MonoBehaviour {
 	public float headBouncing;
 
 	
+	public Collider2D headCollider;
+
+	public float headBouncing;
+
+	
 	// Use this for initialization
 	public static MC_control instance;
 	//public scriptA  hpBar;
@@ -35,8 +40,6 @@ public class MC_control : MonoBehaviour {
 
 	void Start () {
 		resetBoucing(headBouncing);
-		
-		
 		rb2d = GetComponent<Rigidbody2D>();
 		character = GetComponent<Transform>();
 		GameoverBtn.SetActive (false);
@@ -104,7 +107,9 @@ public class MC_control : MonoBehaviour {
 	private void resetBoucing(float headBouncingNum){
 			headCollider.sharedMaterial.bounciness = headBouncingNum;
 	}
-
+	private void resetBoucing(float headBouncingNum){
+			headCollider.sharedMaterial.bounciness = headBouncingNum;
+	}
 	private void SpriteBlinkingEffect()
     {
 		
