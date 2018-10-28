@@ -16,4 +16,6 @@ public class headCollider : MonoBehaviour {
 		MC_control.instance.lostHP (other,DameRate);
 		
 	}
+	
+	
 }
