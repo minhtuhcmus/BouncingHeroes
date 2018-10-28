@@ -82,6 +82,7 @@ public class Saw : MonoBehaviour {
 	void Update () {
         if (isEnable == false) return;
 
+        //Debug.Log("Test Merge");
         // Debug.Log("Test Merge");
         
         transform.Rotate(new Vector3(0.0f,0.0f,2.0f), 3600.0f * Time.deltaTime);
@@ -90,6 +91,7 @@ public class Saw : MonoBehaviour {
             //Debug.LogWarning("MoveToA");
             int layer_Mark = 1 << LayerMask.NameToLayer("Wall");
             if(hit = Physics2D.Raycast(new Vector2(0, transform.position.y), new Vector2(this.side, 0), 10, layer_Mark)) {
+                //Debug.Log(hit.transform.name);
                 // Debug.Log(hit.transform.name);
                 transform.position = Vector3.Lerp(transform.position, new Vector3(hit.point.x, pos_A.y, pos_A.z), speed * Time.deltaTime);
                 transform.position = new Vector2(hit.point.x, transform.position.y);
