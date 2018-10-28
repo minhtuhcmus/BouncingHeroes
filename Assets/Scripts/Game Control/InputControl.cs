@@ -12,7 +12,7 @@ public class InputControl : MonoBehaviour {
     private int forceIndex;
 
     public float resForce;
-    private float t;
+    
     private Vector3 orgPoint;
 
     private bool isFly;
@@ -20,6 +20,8 @@ public class InputControl : MonoBehaviour {
     private Vector3 direction;
 	public static bool gameOver = false;
     public bool m_bNeedToZoom = false;
+
+    
     void Start()
     {
 
@@ -27,14 +29,14 @@ public class InputControl : MonoBehaviour {
         rgb = character.GetComponent<Rigidbody2D>();
         
 
-        t = 0;
+        
         isFly = false;
         isClick = false;
     }
 
     void Update()
     {
-       
+        
     }
 
     void OnMouseDown()
@@ -76,8 +78,9 @@ public class InputControl : MonoBehaviour {
 
 
         //Debug.Log("Force Index : " + forceIndex);
-
+        float normalize = (float)Screen.height / settings.screenHeight;
         launchForce = settings.parts[forceIndex] * settings.maxForce / 100;
+        launchForce /= normalize;
         //Debug.Log("Force to Add : " + launchForce);
         
         Fly();
@@ -99,11 +102,11 @@ public class InputControl : MonoBehaviour {
     float Launch()
     {
         //code here : Heroes fly with force
-        Vector3 mousePos = Input.mousePosition - new Vector3(375, 1334/2);
+        Vector3 mousePos = Input.mousePosition - new Vector3(Screen.width/2, Screen.height/2);
         var worldToPixels = ((Screen.height / 2.0f) / Camera.main.orthographicSize);
-        float distance = Vector3.Distance(mousePos, character.position* worldToPixels) /worldToPixels;
-        //Debug.Log(mousePos);
-        //Debug.Log(character.position);
+        float distance = Vector3.Distance(mousePos, character.position * worldToPixels) /worldToPixels;
+        // Debug.Log(mousePos);
+        // Debug.Log(character.position * worldToPixels);
         if (distance < settings.maxDistance / worldToPixels)
         {
             forceIndex = Mathf.RoundToInt(distance / (settings.distancePerPart / worldToPixels)) - 1;

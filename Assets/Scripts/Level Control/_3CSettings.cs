@@ -16,6 +16,15 @@ public class _3CSettings : ScriptableObject {
     [SerializeField]
     public float safeZoneBottom = 200.0f;
 
+    [Header("Character Default Position X")]
+    [SerializeField]
+    public float charDefaultX = -0.507f;
+
+    [Header("Character Default Position Y")]
+    [SerializeField]
+    public float charDefaultY = 0.283f;
+    
+
     [Header("Max Distance")]
     [SerializeField]
     public float maxDistance = 300f;
@@ -76,7 +85,8 @@ public class _3CSettings : ScriptableObject {
     public float arrowOriScaleY = 0.0f;
     // Use this for initialization
     void Start () {
-		
+		// screenWidth = Screen.width;
+		// screenHeight = Screen.height;
 	}
 	
 	// Update is called once per frame

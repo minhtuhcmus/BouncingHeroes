@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<< HEAD:Assets/HP.cs.meta
-guid: a9a0e861d09268a4cacedd19602b6587
-=======
-guid: 42a94643902856e419ae0d2e27e75b62
->>>>>>> master:Assets/NewBehaviourScript.cs.meta
+guid: 7ac85edf19df4fc46b7272dc66eaf407
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
