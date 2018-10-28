@@ -160,6 +160,6 @@ public class MC_control : MonoBehaviour {
 	}
 
 	public void resetPosition(){
-		character.transform.position = new Vector3(settings.charDefaultX, settings.charDefaultY);
+		character.transform.position = new Vector3(character.transform.position.x, settings.charDefaultY);
 	}
 }
