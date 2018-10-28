@@ -51,6 +51,7 @@ public class InputControl : MonoBehaviour {
         if(m_bNeedToZoom){
             CameraControl.instance.ZoomOut();
         }
+        Debug.Log(m_bNeedToZoom);
         Debug.Log("ZOOMMMMMMMMMM" + m_bNeedToZoom);
     }
 

@@ -13,11 +13,8 @@ public class MC_control : MonoBehaviour {
 	public Collider2D headCollider;
 
 	public bool hasKey = false;
-	
-	public float headBouncing;
-	
-	
 
+	public float headBouncing;
 
 	
 	// Use this for initialization
@@ -108,7 +105,6 @@ public class MC_control : MonoBehaviour {
 	private void resetBoucing(float headBouncingNum){
 			headCollider.sharedMaterial.bounciness = headBouncingNum;
 	}
-	
 
 	private void SpriteBlinkingEffect()
     {
