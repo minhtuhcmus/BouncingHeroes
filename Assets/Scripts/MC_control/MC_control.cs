@@ -17,9 +17,7 @@ public class MC_control : MonoBehaviour {
 	public float headBouncing;
 	
 	
-	//public Collider2D headCollider;
 
-	//public float headBouncing;
 
 	
 	// Use this for initialization
@@ -106,9 +104,11 @@ public class MC_control : MonoBehaviour {
 		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 	}
 
-	//private void resetBoucing(float headBouncingNum){
-	//		headCollider.sharedMaterial.bounciness = headBouncingNum;
-	//}
+
+	private void resetBoucing(float headBouncingNum){
+			headCollider.sharedMaterial.bounciness = headBouncingNum;
+	}
+	
 
 	private void SpriteBlinkingEffect()
     {
