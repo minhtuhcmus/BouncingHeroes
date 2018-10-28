@@ -6,10 +6,12 @@ public class Arrow : MonoBehaviour {
 	public SpriteRenderer m_arrow;
 	public _3CSettings settings;
 	public float m_fPreviousDistance = 0.0f;
-	public float m_yScalePerSec = 0.1f;
+	public float m_fScalePerSec = 0.1f;
+
 	// Use this for initialization
 	void Start () {
 		m_arrow = GetComponent<SpriteRenderer>();
+		m_arrow.transform.localScale = new Vector3(0, 0);
 	}
 	
 	// Update is called once per frame
@@ -18,26 +20,26 @@ public class Arrow : MonoBehaviour {
 	}
 
 	//BUG : WRONG CALCULATION - ARROW SCALE NOT LIKE EXPECTED
-	public void Scale(float fDistance, int iForcePart){
-		if(fDistance > m_fPreviousDistance){
-			if(m_arrow.transform.localScale.y < settings.arrowMaxScale){
-				m_arrow.transform.localScale += new Vector3(0, 0.1f, 0);
-			}
+	public void Scale(float fDistance){
+		float arrowScale = fDistance * settings.arrowScaleSpeed;
+		Debug.Log("[Minh] Max arrowScale:" + settings.arrowScaleSpeed);
+		if(arrowScale < settings.arrowMaxScale) {
+			//Debug.Log("[Minh] arrowScale:" + arrowScale);
+			m_arrow.transform.localScale = new Vector3(settings.arrowOriScaleX, arrowScale);
+			ChangeColor(arrowScale);
 		}
-		else if(fDistance < m_fPreviousDistance){
-			if(m_arrow.transform.localScale.y > 0){
-				m_arrow.transform.localScale -= new Vector3(0, 0.1f, 0);
-			}
+		else {
+			m_arrow.transform.localScale = new Vector3(settings.arrowOriScaleX, settings.arrowMaxScale);
+			ChangeColor(arrowScale);
 		}
-		m_fPreviousDistance = fDistance;
-		ChangeColor(iForcePart);
 	}
 
-	public void ChangeColor(int iForcePart){
-		if(iForcePart < settings.parts.Count / 3.0f){
+	public void ChangeColor(float arrowScale){
+		float eachPartOfDistance = settings.arrowMaxScale ;
+		if(arrowScale < settings.arrowMaxScale * 0.5f){
 			m_arrow.color = Color.green;
 		}
-		else if(iForcePart > settings.parts.Count / 3.0f && iForcePart < settings.parts.Count / 2.0f){
+		else if(arrowScale <  settings.arrowMaxScale * 0.75f){
 			m_arrow.color = Color.yellow;
 		}
 		else {

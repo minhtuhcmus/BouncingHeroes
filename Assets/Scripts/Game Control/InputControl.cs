@@ -112,7 +112,7 @@ public class InputControl : MonoBehaviour {
             }
             
         }
-        MC_control.instance.ArrowScale(distance, forceIndex);
+        MC_control.instance.ArrowScale(distance);
         
         return 0.0f;
 

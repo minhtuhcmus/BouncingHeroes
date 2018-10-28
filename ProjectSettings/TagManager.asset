@@ -6,6 +6,8 @@ TagManager:
   tags:
   - saw
   - Wall
+  - key
+  - MC
   layers:
   - Default
   - TransparentFX

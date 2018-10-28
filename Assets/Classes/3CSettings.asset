@@ -16,6 +16,7 @@ MonoBehaviour:
   safeZoneTop: 100
   safeZoneBottom: 100
   maxDistance: 600
+  arrowScaleSpeed: 0.25
   maxForce: 1000
   distancePerPart: 75
   parts:
@@ -34,3 +35,6 @@ MonoBehaviour:
   secondPartPercentPlayerForce: 0.7
   timePercentSecondPart: 0.8
   timeReach0: 3
+  arrowMaxScale: 0.65
+  arrowOriScaleX: 0.779436
+  arrowOriScaleY: 0
