@@ -20,6 +20,10 @@ public class _3CSettings : ScriptableObject {
     [SerializeField]
     public float maxDistance = 300f;
 
+     [Header("Arrow Scale Speed")]
+    [SerializeField]
+    public float arrowScaleSpeed = 0.25f;
+
     [Header("Max Force")]
     [SerializeField]
     public float maxForce = 300f;
@@ -65,11 +69,11 @@ public class _3CSettings : ScriptableObject {
 
     [Header("Arrow Origin Scale X")]
     [SerializeField]
-    public float arrowOriScaleX = 0.779436f;
+    public float arrowOriScaleX = 0.0f;
 
     [Header("Arrow Origin Scale Y")]
     [SerializeField]
-    public float arrowOriScaleY = 0.32776f;
+    public float arrowOriScaleY = 0.0f;
     // Use this for initialization
     void Start () {
 		
