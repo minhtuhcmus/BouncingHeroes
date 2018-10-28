@@ -20,6 +20,11 @@ public class MC_control : MonoBehaviour {
 
 
 	
+	public Collider2D headCollider;
+
+	public float headBouncing;
+
+	
 	// Use this for initialization
 	public static MC_control instance;
 	//public scriptA  hpBar;
@@ -109,7 +114,6 @@ public class MC_control : MonoBehaviour {
 			headCollider.sharedMaterial.bounciness = headBouncingNum;
 	}
 	
-
 	private void SpriteBlinkingEffect()
     {
 		

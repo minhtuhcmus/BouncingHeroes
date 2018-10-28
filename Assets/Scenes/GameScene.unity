@@ -1044,10 +1044,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GameoverBtn: {fileID: 1920113506}
   hpBar: {fileID: 133599558}
+
   arrow: {fileID: 1045241169}
   headCollider: {fileID: 911877536}
   hasKey: 0
   headBouncing: 1
+
+  headCollider: {fileID: 911877536}
+  bodyCollider: {fileID: 1430783608}
+  backCollider: {fileID: 210588013}
+  headBouncing: 1
+  bodyBouncing: 0.5
+  backBouncing: 0.5
+
   spriteBlinkingTimer: 0
   spriteBlinkingMiniDuration: 0.2
   spriteBlinkingTotalTimer: 0
