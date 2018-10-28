@@ -159,7 +159,10 @@ public class MC_control : MonoBehaviour {
 		arrow.GetComponent<Arrow>().ScaleBack();
 	}
 
+	//BUG : LERP IS NOT WORKING
 	public void resetPosition(){
-		character.transform.position = new Vector3(character.transform.position.x, settings.charDefaultY);
+		Vector3 startPosition = character.transform.position;
+		Vector3 endPosition = new Vector3(character.transform.position.x, settings.charDefaultY);
+		character.transform.position = Vector3.Lerp(startPosition, endPosition, 0.01f);
 	}
 }

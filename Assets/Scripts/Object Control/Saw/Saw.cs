@@ -17,7 +17,6 @@ public class Saw : MonoBehaviour {
     private Vector3 pos_B;
     private float speed = 0.5f;
 
-
     public void intit(float minY, float maxY, float range, int side)
     {
         float worldToPixels = ((settings.screenHeight / 2.0f) / Camera.main.orthographicSize);
