@@ -1020,7 +1020,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: fe5b44bdb7f61104a92cc32b6aa1a9f9, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1028,7 +1028,7 @@ SpriteRenderer:
   m_Size: {x: 0.59, y: 0.64}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &954192973
@@ -1044,6 +1044,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GameoverBtn: {fileID: 1920113506}
   hpBar: {fileID: 133599558}
+  m_Heroes:
+  - {fileID: 11400000, guid: b9a28c520342e8941980203c8d0f39a2, type: 2}
+  m_DesignedWidth: 100
+  m_DesignedHeight: 125
   arrow: {fileID: 1045241169}
   headCollider: {fileID: 911877536}
   hasKey: 0
