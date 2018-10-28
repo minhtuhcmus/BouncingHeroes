@@ -132,8 +132,8 @@ public class MC_control : MonoBehaviour {
 		}
 	}
 
-	public void ArrowScale(float fDistance, int iForcePart){
-		arrow.GetComponent<Arrow>().Scale(fDistance, iForcePart);
+	public void ArrowScale(float fDistance){
+		arrow.GetComponent<Arrow>().Scale(fDistance);
 	}
 
 	public void ArrowScaleBack(){

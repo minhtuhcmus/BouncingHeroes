@@ -787,18 +787,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GameoverBtn: {fileID: 1920113506}
   hpBar: {fileID: 133599558}
-
   arrow: {fileID: 1045241169}
   headCollider: {fileID: 911877536}
   headBouncing: 1
-
-  headCollider: {fileID: 911877536}
-  bodyCollider: {fileID: 1430783608}
-  backCollider: {fileID: 210588013}
-  headBouncing: 1
-  bodyBouncing: 0.5
-  backBouncing: 0.5
-
   spriteBlinkingTimer: 0
   spriteBlinkingMiniDuration: 0.2
   spriteBlinkingTotalTimer: 0
@@ -867,7 +858,7 @@ MonoBehaviour:
   m_arrow: {fileID: 1045241172}
   settings: {fileID: 11400000, guid: cf5b5becb15b6c842a1749bb3e64436a, type: 2}
   m_fPreviousDistance: 0
-  m_yScalePerSec: 0.1
+  m_fScalePerSec: 0.1
 --- !u!212 &1045241172
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -913,7 +904,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!1 &1154353203
 GameObject:
   m_ObjectHideFlags: 0
