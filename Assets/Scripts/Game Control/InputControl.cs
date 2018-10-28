@@ -12,7 +12,7 @@ public class InputControl : MonoBehaviour {
     private int forceIndex;
 
     public float resForce;
-    private float t;
+    
     private Vector3 orgPoint;
 
     private bool isFly;
@@ -20,6 +20,8 @@ public class InputControl : MonoBehaviour {
     private Vector3 direction;
 	public static bool gameOver = false;
     public bool m_bNeedToZoom = false;
+
+    
     void Start()
     {
 
@@ -27,14 +29,14 @@ public class InputControl : MonoBehaviour {
         rgb = character.GetComponent<Rigidbody2D>();
         
 
-        t = 0;
+        
         isFly = false;
         isClick = false;
     }
 
     void Update()
     {
-       
+        
     }
 
     void OnMouseDown()

@@ -30,4 +30,9 @@ public class CameraControl : MonoBehaviour {
 	public void ZoomBack(){
 		this.GetComponent<Camera>().orthographicSize = 5;
 	}
+
+    public void Transition()
+    {
+        this.GetComponent<Camera>().transform.position += new Vector3(0, 10); 
+    }
 }
