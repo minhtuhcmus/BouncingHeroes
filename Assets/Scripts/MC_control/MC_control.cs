@@ -9,6 +9,7 @@ public class MC_control : MonoBehaviour {
 
 	public GameObject GameoverBtn;
 	public GameObject hpBar;
+<<<<<<< HEAD
 
     [Header("Heroes : ")]
     [SerializeField]
@@ -17,13 +18,15 @@ public class MC_control : MonoBehaviour {
     public float m_DesignedWidth;
     public float m_DesignedHeight;
 	
+=======
+	public GameObject arrow;
+>>>>>>> master
 	public Collider2D headCollider;
-	public Collider2D bodyCollider;
-	public Collider2D backCollider;
-	
+
+	public bool hasKey = false;
+
 	public float headBouncing;
-	public float bodyBouncing;
-	public float backBouncing;
+
 	
 	// Use this for initialization
 	public static MC_control instance;
@@ -44,12 +47,16 @@ public class MC_control : MonoBehaviour {
 	private Transform character;
     SpriteRenderer m_spriteRenderer;
 	void Start () {
+<<<<<<< HEAD
 		resetBoucing(headBouncing,bodyBouncing,backBouncing);
 
         m_spriteRenderer = GetComponent<SpriteRenderer>();
         m_spriteRenderer.sprite = m_Heroes[0].m_Avatar;
         m_spriteRenderer.drawMode = SpriteDrawMode.Sliced;
         m_spriteRenderer.size = new Vector2(m_DesignedWidth/200.0f, m_DesignedHeight/200.0f);
+=======
+		//resetBoucing(headBouncing);
+>>>>>>> master
 		rb2d = GetComponent<Rigidbody2D>();
 		character = GetComponent<Transform>();
 		GameoverBtn.SetActive (false);
@@ -85,7 +92,7 @@ public class MC_control : MonoBehaviour {
 	}
 	public void hurt(){
 		
-		Debug.Log("hurt");
+		//Debug.Log("hurt");
 		float angle;
 		Vector3 axis = Vector3.zero;
 		axis = character.rotation.eulerAngles;
@@ -109,15 +116,16 @@ public class MC_control : MonoBehaviour {
 		
 	}
 	public void tryAgain(){
-		Debug.Log(" tryAgain");
+		//Debug.Log(" tryAgain");
 		InputControl.gameOver=false;
 		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 	}
-	private void resetBoucing(float a, float b, float c){
-			headCollider.sharedMaterial.bounciness = a;
-			bodyCollider.sharedMaterial.bounciness = b;
-			backCollider.sharedMaterial.bounciness = c;
+
+
+	private void resetBoucing(float headBouncingNum){
+			headCollider.sharedMaterial.bounciness = headBouncingNum;
 	}
+
 	private void SpriteBlinkingEffect()
     {
 		
@@ -129,10 +137,6 @@ public class MC_control : MonoBehaviour {
              spriteBlinkingTotalTimer = 0.0f;
              this.gameObject.GetComponent<SpriteRenderer> ().enabled = true;   // according to 
                       //your sprite
-			resetBoucing(headBouncing,bodyBouncing,backBouncing);
-					  
-					  
-			
              return;
         }
      
@@ -147,5 +151,13 @@ public class MC_control : MonoBehaviour {
 				this.gameObject.GetComponent<SpriteRenderer> ().enabled = true;   //make changes
 			}
 		}
+	}
+
+	public void ArrowScale(float fDistance){
+		arrow.GetComponent<Arrow>().Scale(fDistance);
+	}
+
+	public void ArrowScaleBack(){
+		arrow.GetComponent<Arrow>().ScaleBack();
 	}
 }

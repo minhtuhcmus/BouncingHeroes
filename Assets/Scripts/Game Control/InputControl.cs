@@ -19,6 +19,7 @@ public class InputControl : MonoBehaviour {
     private bool isClick;
     private Vector3 direction;
 	public static bool gameOver = false;
+    public bool m_bNeedToZoom = false;
     void Start()
     {
 
@@ -46,8 +47,12 @@ public class InputControl : MonoBehaviour {
         screenPoint = Camera.main.WorldToScreenPoint(gameObject.transform.position);
         offset = gameObject.transform.position - Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z));
 
-
-
+        m_bNeedToZoom = CheckZoomCamera();
+        if(m_bNeedToZoom){
+            CameraControl.instance.ZoomOut();
+        }
+        Debug.Log(m_bNeedToZoom);
+        Debug.Log("ZOOMMMMMMMMMM" + m_bNeedToZoom);
     }
 
     void OnMouseDrag()
@@ -71,11 +76,18 @@ public class InputControl : MonoBehaviour {
 
 
         //Debug.Log("Force Index : " + forceIndex);
-
+        float normalize = (float)Screen.height / settings.screenHeight;
         launchForce = settings.parts[forceIndex] * settings.maxForce / 100;
+        launchForce /= normalize;
         //Debug.Log("Force to Add : " + launchForce);
         
         Fly();
+
+        MC_control.instance.ArrowScaleBack();
+        if(m_bNeedToZoom){
+            CameraControl.instance.ZoomBack();
+            m_bNeedToZoom = false;
+        }
     }
 
     Quaternion Rotation()
@@ -88,11 +100,11 @@ public class InputControl : MonoBehaviour {
     float Launch()
     {
         //code here : Heroes fly with force
-        Vector3 mousePos = Input.mousePosition - new Vector3(375, 1334/2);
+        Vector3 mousePos = Input.mousePosition - new Vector3(Screen.width/2, Screen.height/2);
         var worldToPixels = ((Screen.height / 2.0f) / Camera.main.orthographicSize);
-        float distance = Vector3.Distance(mousePos, character.position* worldToPixels) /worldToPixels;
-        Debug.Log(mousePos);
-        Debug.Log(character.position);
+        float distance = Vector3.Distance(mousePos, character.position * worldToPixels) /worldToPixels;
+        // Debug.Log(mousePos);
+        // Debug.Log(character.position * worldToPixels);
         if (distance < settings.maxDistance / worldToPixels)
         {
             forceIndex = Mathf.RoundToInt(distance / (settings.distancePerPart / worldToPixels)) - 1;
@@ -103,7 +115,7 @@ public class InputControl : MonoBehaviour {
             }
             
         }
-
+        MC_control.instance.ArrowScale(distance);
         
         return 0.0f;
 
@@ -117,5 +129,18 @@ public class InputControl : MonoBehaviour {
         rgb.AddForce(direction.normalized * launchForce);
     }
 
+     bool CheckZoomCamera(){
+        var worldToPixels = ((Screen.height / 2.0f) / Camera.main.orthographicSize);
+        float m_fBoundX = Screen.width * 0.8f / 2 / worldToPixels;
+        float m_fBoundY = Screen.height * 0.8f / 2 / worldToPixels;
 
+        Debug.Log(m_fBoundX);
+        Debug.Log(m_fBoundY);
+        
+        if(gameObject.transform.position.x < -m_fBoundX || gameObject.transform.position.x > m_fBoundX || gameObject.transform.position.y < -m_fBoundY || gameObject.transform.position.y > m_fBoundY){
+            Debug.Log("Zoom Out!!!");
+            return true;
+        }
+        return false; 
+    }
 }

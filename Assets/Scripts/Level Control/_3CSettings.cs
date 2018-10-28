@@ -20,6 +20,10 @@ public class _3CSettings : ScriptableObject {
     [SerializeField]
     public float maxDistance = 300f;
 
+     [Header("Arrow Scale Speed")]
+    [SerializeField]
+    public float arrowScaleSpeed = 0.25f;
+
     [Header("Max Force")]
     [SerializeField]
     public float maxForce = 300f;
@@ -57,9 +61,23 @@ public class _3CSettings : ScriptableObject {
     [Header("Time Reach 0")]
     [SerializeField]
     public float timeReach0 = 3f;
+
+    [Header("Arrow Max Scale")]
+    [SerializeField]
+    public float arrowMaxScale = 0.650f;
+
+
+    [Header("Arrow Origin Scale X")]
+    [SerializeField]
+    public float arrowOriScaleX = 0.0f;
+
+    [Header("Arrow Origin Scale Y")]
+    [SerializeField]
+    public float arrowOriScaleY = 0.0f;
     // Use this for initialization
     void Start () {
-		
+		// screenWidth = Screen.width;
+		// screenHeight = Screen.height;
 	}
 	
 	// Update is called once per frame
