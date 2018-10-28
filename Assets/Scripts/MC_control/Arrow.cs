@@ -11,6 +11,7 @@ public class Arrow : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		m_arrow = GetComponent<SpriteRenderer>();
+		m_arrow.transform.localScale = new Vector3(0, 0);
 	}
 	
 	// Update is called once per frame
