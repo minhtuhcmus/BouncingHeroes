@@ -105,7 +105,7 @@ public class MC_control : MonoBehaviour {
 	private void resetBoucing(float headBouncingNum){
 			headCollider.sharedMaterial.bounciness = headBouncingNum;
 	}
-	
+
 	private void SpriteBlinkingEffect()
     {
 		
