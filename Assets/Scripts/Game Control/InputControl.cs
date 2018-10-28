@@ -130,15 +130,19 @@ public class InputControl : MonoBehaviour {
     }
 
      bool CheckZoomCamera(){
-        var worldToPixels = ((Screen.height / 2.0f) / Camera.main.orthographicSize);
-        float m_fBoundX = Screen.width * 0.8f / 2 / worldToPixels;
-        float m_fBoundY = Screen.height * 0.8f / 2 / worldToPixels;
-
-        Debug.Log(m_fBoundX);
-        Debug.Log(m_fBoundY);
+        float dx = 0.0f;
+        float dy = 0.0f;
+        float m_fBoundX = 0.5f;
+        float m_fBoundY = 0.5f;
         
-        if(gameObject.transform.position.x < -m_fBoundX || gameObject.transform.position.x > m_fBoundX || gameObject.transform.position.y < -m_fBoundY || gameObject.transform.position.y > m_fBoundY){
-            Debug.Log("Zoom Out!!!");
+        dx = character.position.x - m_fBoundX;
+        dy = character.position.y - m_fBoundY;
+        //Debug.Log("Transform X" + character.position.x);
+        //Debug.Log("Transform Y" + character.position.y);
+        //Debug.Log("DX" + dx);
+        //Debug.Log("DY" + dy);
+        Debug.Log("Screen height" + Screen.height);
+        if(dy < -4.0f || dy > 3.5f || dx < -2.0f || dx > 1.5f){
             return true;
         }
         return false; 
