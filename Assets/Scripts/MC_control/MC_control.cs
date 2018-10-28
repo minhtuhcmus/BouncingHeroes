@@ -12,12 +12,14 @@ public class MC_control : MonoBehaviour {
 	public GameObject arrow;
 	public Collider2D headCollider;
 
-	public float headBouncing;
-
+	public bool hasKey = false;
 	
-	public Collider2D headCollider;
-
 	public float headBouncing;
+	
+	
+	//public Collider2D headCollider;
+
+	//public float headBouncing;
 
 	
 	// Use this for initialization
@@ -39,7 +41,7 @@ public class MC_control : MonoBehaviour {
 	private Transform character;
 
 	void Start () {
-		resetBoucing(headBouncing);
+		//resetBoucing(headBouncing);
 		rb2d = GetComponent<Rigidbody2D>();
 		character = GetComponent<Transform>();
 		GameoverBtn.SetActive (false);
@@ -75,7 +77,7 @@ public class MC_control : MonoBehaviour {
 	}
 	public void hurt(){
 		
-		Debug.Log("hurt");
+		//Debug.Log("hurt");
 		float angle;
 		Vector3 axis = Vector3.zero;
 		axis = character.rotation.eulerAngles;
@@ -99,17 +101,15 @@ public class MC_control : MonoBehaviour {
 		
 	}
 	public void tryAgain(){
-		Debug.Log(" tryAgain");
+		//Debug.Log(" tryAgain");
 		InputControl.gameOver=false;
 		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 	}
 
-	private void resetBoucing(float headBouncingNum){
-			headCollider.sharedMaterial.bounciness = headBouncingNum;
-	}
-	private void resetBoucing(float headBouncingNum){
-			headCollider.sharedMaterial.bounciness = headBouncingNum;
-	}
+	//private void resetBoucing(float headBouncingNum){
+	//		headCollider.sharedMaterial.bounciness = headBouncingNum;
+	//}
+
 	private void SpriteBlinkingEffect()
     {
 		
