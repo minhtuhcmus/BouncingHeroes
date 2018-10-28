@@ -1,10 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+#if UNITY_EDITOR //Editor only tag
 using UnityEditor;
+#endif
 
 public class CreateStage {
-
+#if UNITY_EDITOR //Editor only tag
 	[MenuItem("Assets/Create/My Scriptable Object")]
     public static void CreateMyAsset()
     {
@@ -17,4 +19,5 @@ public class CreateStage {
 
         Selection.activeObject = asset;
     }
+#endif
 }

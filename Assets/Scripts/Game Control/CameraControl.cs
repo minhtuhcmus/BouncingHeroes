@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿	using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -13,7 +13,9 @@ public class CameraControl : MonoBehaviour {
 			instance = this;
 	}
 	void Start () {
-
+		float width = Screen.width;
+		float height = Screen.height;
+		gameObject.GetComponent<Camera>().aspect = Mathf.RoundToInt(width/height * 100f) / 100f;
 	}
 
 	// Update is called once per frame
