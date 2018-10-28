@@ -76,7 +76,8 @@ public class _3CSettings : ScriptableObject {
     public float arrowOriScaleY = 0.0f;
     // Use this for initialization
     void Start () {
-		
+		// screenWidth = Screen.width;
+		// screenHeight = Screen.height;
 	}
 	
 	// Update is called once per frame

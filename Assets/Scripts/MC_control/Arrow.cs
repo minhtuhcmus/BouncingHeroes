@@ -22,7 +22,7 @@ public class Arrow : MonoBehaviour {
 	//BUG : WRONG CALCULATION - ARROW SCALE NOT LIKE EXPECTED
 	public void Scale(float fDistance){
 		float arrowScale = fDistance * settings.arrowScaleSpeed;
-		Debug.Log("[Minh] Max arrowScale:" + settings.arrowScaleSpeed);
+		// Debug.Log("[Minh] Max arrowScale:" + fDistance);
 		if(arrowScale < settings.arrowMaxScale) {
 			//Debug.Log("[Minh] arrowScale:" + arrowScale);
 			m_arrow.transform.localScale = new Vector3(settings.arrowOriScaleX, arrowScale);

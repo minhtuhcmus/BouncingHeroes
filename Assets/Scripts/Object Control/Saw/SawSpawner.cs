@@ -9,6 +9,9 @@ public class SawSpawner : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         listOfSaws = subStage.listOfSaws;
+        float aspectY = Screen.height / 1336.0f;
+        float aspectX = Screen.width / 750.0f;
+        Debug.Log("Aspect:" + Screen.height);
         for(int i = 0; i <= listOfSaws.Count;  i++)
         {
             Saw newSaw = GameObject.Find("Saw (" + i + ")").GetComponent<Saw>();
