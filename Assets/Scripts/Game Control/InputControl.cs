@@ -47,9 +47,11 @@ public class InputControl : MonoBehaviour {
         screenPoint = Camera.main.WorldToScreenPoint(gameObject.transform.position);
         offset = gameObject.transform.position - Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z));
 
+        m_bNeedToZoom = CheckZoomCamera();
         if(m_bNeedToZoom){
             CameraControl.instance.ZoomOut();
         }
+        Debug.Log(m_bNeedToZoom);
         Debug.Log("ZOOMMMMMMMMMM" + m_bNeedToZoom);
     }
 
@@ -100,8 +102,8 @@ public class InputControl : MonoBehaviour {
         Vector3 mousePos = Input.mousePosition - new Vector3(375, 1334/2);
         var worldToPixels = ((Screen.height / 2.0f) / Camera.main.orthographicSize);
         float distance = Vector3.Distance(mousePos, character.position* worldToPixels) /worldToPixels;
-        Debug.Log(mousePos);
-        Debug.Log(character.position);
+        //Debug.Log(mousePos);
+        //Debug.Log(character.position);
         if (distance < settings.maxDistance / worldToPixels)
         {
             forceIndex = Mathf.RoundToInt(distance / (settings.distancePerPart / worldToPixels)) - 1;
@@ -134,10 +136,10 @@ public class InputControl : MonoBehaviour {
         
         dx = character.position.x - m_fBoundX;
         dy = character.position.y - m_fBoundY;
-        Debug.Log("Transform X" + character.position.x);
-        Debug.Log("Transform Y" + character.position.y);
-        Debug.Log("DX" + dx);
-        Debug.Log("DY" + dy);
+        //Debug.Log("Transform X" + character.position.x);
+        //Debug.Log("Transform Y" + character.position.y);
+        //Debug.Log("DX" + dx);
+        //Debug.Log("DY" + dy);
         Debug.Log("Screen height" + Screen.height);
         if(dy < -4.0f || dy > 3.5f || dx < -2.0f || dx > 1.5f){
             return true;

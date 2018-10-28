@@ -13,14 +13,6 @@ public class MC_control : MonoBehaviour {
 	public Collider2D headCollider;
 
 	public bool hasKey = false;
-	
-	public float headBouncing;
-	
-	
-
-
-	
-	public Collider2D headCollider;
 
 	public float headBouncing;
 
