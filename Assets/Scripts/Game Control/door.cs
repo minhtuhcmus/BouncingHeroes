@@ -3,7 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class door : MonoBehaviour {
-
+	
+	public static door instance;
+	
+	public void setIsTrigger(){
+		GetComponent<Collider>().isTrigger = true;
+	}
+	
 	void OnTriggerEnter2D(Collider2D  other){
 		
 		if(other.gameObject.CompareTag("MC")){
