@@ -16,6 +16,15 @@ public class _3CSettings : ScriptableObject {
     [SerializeField]
     public float safeZoneBottom = 200.0f;
 
+    [Header("Character Default Position X")]
+    [SerializeField]
+    public float charDefaultX = -0.507f;
+
+    [Header("Character Default Position Y")]
+    [SerializeField]
+    public float charDefaultY = 0.283f;
+    
+
     [Header("Max Distance")]
     [SerializeField]
     public float maxDistance = 300f;

@@ -16,7 +16,10 @@ public class door : MonoBehaviour {
 			if(MC_control.instance.hasKey ){
 				Destroy(this.gameObject);
                 // Khoa goi ham chuyen map o day
-                CameraControl.instance.Transition();
+
+                LevelUpTransition.instance.LevelUp();
+				MC_control.instance.resetPosition();
+                //CameraControl.instance.Transition();
 
             }
 			

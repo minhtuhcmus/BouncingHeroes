@@ -9,7 +9,7 @@ public class MC_control : MonoBehaviour {
 
 	public GameObject GameoverBtn;
 	public GameObject hpBar;
-
+	public _3CSettings settings;
 
     [Header("Heroes : ")]
     [SerializeField]
@@ -157,5 +157,9 @@ public class MC_control : MonoBehaviour {
 
 	public void ArrowScaleBack(){
 		arrow.GetComponent<Arrow>().ScaleBack();
+	}
+
+	public void resetPosition(){
+		character.transform.position = new Vector3(settings.charDefaultX, settings.charDefaultY);
 	}
 }
