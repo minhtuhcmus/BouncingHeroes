@@ -9,6 +9,13 @@ public class MC_control : MonoBehaviour {
 
 	public GameObject GameoverBtn;
 	public GameObject hpBar;
+
+    [Header("Heroes : ")]
+    [SerializeField]
+    public List<Heroes> m_Heroes = new List<Heroes>();
+
+    public float m_DesignedWidth;
+    public float m_DesignedHeight;
 	
 	public Collider2D headCollider;
 	public Collider2D bodyCollider;
@@ -35,11 +42,14 @@ public class MC_control : MonoBehaviour {
 	//public bool test =false;
 	
 	private Transform character;
-
+    SpriteRenderer m_spriteRenderer;
 	void Start () {
 		resetBoucing(headBouncing,bodyBouncing,backBouncing);
-		
-		
+
+        m_spriteRenderer = GetComponent<SpriteRenderer>();
+        m_spriteRenderer.sprite = m_Heroes[0].m_Avatar;
+        m_spriteRenderer.drawMode = SpriteDrawMode.Sliced;
+        m_spriteRenderer.size = new Vector2(m_DesignedWidth/200.0f, m_DesignedHeight/200.0f);
 		rb2d = GetComponent<Rigidbody2D>();
 		character = GetComponent<Transform>();
 		GameoverBtn.SetActive (false);
