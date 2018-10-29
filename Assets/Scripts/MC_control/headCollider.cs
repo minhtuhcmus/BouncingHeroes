@@ -18,4 +18,9 @@ public class headCollider : MonoBehaviour {
 	}
 	
 	
+	private void OnCollisionExit2D(Collision2D other)
+	{
+		MC_control.instance.RotationAfterBouncing();
+	}
+	
 }

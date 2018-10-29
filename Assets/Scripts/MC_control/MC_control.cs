@@ -159,6 +159,12 @@ public class MC_control : MonoBehaviour {
 		arrow.GetComponent<Arrow>().ScaleBack();
 	}
 
+	public void RotationAfterBouncing(){
+		Vector2 fore = rb2d.velocity;
+		Quaternion Rotation = Quaternion.LookRotation(Vector3.back, fore);
+		character.rotation = Quaternion.Inverse(Rotation);
+	}
+	
 	//BUG : LERP IS NOT WORKING
 	public void resetPosition(){
 		Vector3 startPosition = character.transform.position;

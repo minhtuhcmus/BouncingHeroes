@@ -1044,6 +1044,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GameoverBtn: {fileID: 1920113506}
   hpBar: {fileID: 133599558}
+  settings: {fileID: 0}
   m_Heroes:
   - {fileID: 11400000, guid: b9a28c520342e8941980203c8d0f39a2, type: 2}
   m_DesignedWidth: 100
