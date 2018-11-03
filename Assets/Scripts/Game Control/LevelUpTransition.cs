@@ -10,16 +10,17 @@ public class LevelUpTransition : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
+	//NOTE : NEED TO FIND THE WAY TO DESTROY COMPLETED MAP
 	void Update () {
-
+		if(door.instance.isDestroyed){
+			Vector3 startPosition = gameObject.transform.position;
+			Vector3 endPosition = new Vector3(gameObject.transform.position.x, -15);
+			gameObject.transform.position = Vector3.Lerp(startPosition, endPosition, 0.01f);
+		}
 	}
 	
 	void Awake(){
 		if (instance == null)
 			instance = this;
-	}
-
-	public void LevelUp(){
-		gameObject.transform.position = new Vector3(0, -15, 0);
 	}
 }
