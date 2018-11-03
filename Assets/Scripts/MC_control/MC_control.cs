@@ -67,16 +67,18 @@ public class MC_control : MonoBehaviour {
          { 
              SpriteBlinkingEffect();
          }
-		 
+		 if(door.instance.isDestroyed){
+			Vector3 startPosition = character.transform.position;
+			Vector3 endPosition = new Vector3(character.transform.position.x, settings.charDefaultY);
+			character.transform.position = Vector3.Lerp(startPosition, endPosition, 0.01f);
+		}
 			
     }
 
 	void Awake()
 	{
-		
 		if (instance == null)
 			instance = this;
-		
 	}
 	
 	public void lostHP(Collision2D other, float DameRate)
@@ -163,12 +165,5 @@ public class MC_control : MonoBehaviour {
 		Vector2 fore = rb2d.velocity;
 		Quaternion Rotation = Quaternion.LookRotation(Vector3.back, fore);
 		character.rotation = Quaternion.Inverse(Rotation);
-	}
-	
-	//BUG : LERP IS NOT WORKING
-	public void resetPosition(){
-		Vector3 startPosition = character.transform.position;
-		Vector3 endPosition = new Vector3(character.transform.position.x, settings.charDefaultY);
-		character.transform.position = Vector3.Lerp(startPosition, endPosition, 0.01f);
 	}
 }
