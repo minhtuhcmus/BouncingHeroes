@@ -9,19 +9,12 @@ public class key : MonoBehaviour {
 		//Debug.Log("KEYyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy");
 		if(other.gameObject.CompareTag("MC")){
 			Destroy(this.gameObject);
-			MC_control.instance.hasKey = true;
-			door.instance.setIsTrigger();
+			//MC_control.instance.hasKey = true;
+			door.instance.hitKey();
 			//this.gameObject.GetComponent<SpriteRenderer> ().enabled = false;
 			
 		}
 	}
 	
-	private void OnCollisionEnter2D(Collision2D other)
-	{
-		if(other.collider.tag == "MC"){
-			MC_control.instance.hasKey = true;
-			this.gameObject.GetComponent<SpriteRenderer> ().enabled = false;
-		}
-		
-	}
+
 }
