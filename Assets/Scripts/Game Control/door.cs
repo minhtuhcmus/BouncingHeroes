@@ -6,9 +6,14 @@ public class door : MonoBehaviour {
 	
 	public static door instance;
 	public bool isDestroyed;
-
+	
+	public bool outLock = false;
+	public int hpDoor = 2 ;
+	
 	void Start(){
 		isDestroyed = false;
+		
+		
 	}
 
 	void Awake(){
@@ -22,6 +27,17 @@ public class door : MonoBehaviour {
 
 	public void setIsTrigger(){
 		GetComponent<Collider>().isTrigger = true;
+	}
+	
+	void OnCollisionEnter2D(Collision2D other){
+		if(outLock){
+			hpDoor -=1;
+			if(hpDoor <= 0){
+				Destroy(this.gameObject);
+				isDestroyed = true;				
+			}
+
+		}
 	}
 	
 	void OnTriggerEnter2D(Collider2D  other){
