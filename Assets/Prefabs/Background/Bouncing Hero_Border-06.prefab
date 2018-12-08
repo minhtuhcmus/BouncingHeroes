@@ -56,6 +56,7 @@ GameObject:
   - component: {fileID: 61011082609879770}
   - component: {fileID: 61110166486549626}
   - component: {fileID: 61286220747762798}
+  - component: {fileID: 114364675869244444}
   m_Layer: 8
   m_Name: Bouncing Hero_Border-06
   m_TagString: Wall
@@ -364,6 +365,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &114364675869244444
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1369310481021066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b198f4eff8ee6b3478eeabaee0630f04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  allCollider: []
 --- !u!212 &212972004149817734
 SpriteRenderer:
   m_ObjectHideFlags: 1
