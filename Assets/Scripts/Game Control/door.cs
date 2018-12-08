@@ -7,28 +7,42 @@ public class door : MonoBehaviour {
 	public static door instance;
 	public bool isDestroyed;
 	public BoxCollider2D myCollider;
-	
+	public GameObject  key;
 	
 	public bool outLock = false;
 	public int hpDoor = 2 ;
 	
-	public int numKeyNeed = 1;
-	
+	public int numKeyNeed = 10;
+	//cac vi tri x y nay phai dua tren vi tri cac key spaw ra khi chay. keo cac key spaw toi cac vi tri de biet dia diem x, y
+	public float xMin;
+	public float xmax;
+	public float yMin;
+	public float yMax;
 	
 	void Start(){
 		isDestroyed = false;
 		myCollider = GetComponent<BoxCollider2D>();
-		
+		if(numKeyNeed>0 && !outLock)
+			spawnKey(numKeyNeed);
 	}
 
 	void Awake(){
 		if (instance == null)
 			instance = this;
 	}
-
-	void Update(){
-		
+	
+	public void spawnKey(int numOfkey){
+		for(int i=0;i < numOfkey ; i++){
+			Vector3 positionSpaw = new Vector3(Random.Range(xMin, xmax), Random.Range(yMin, yMax),0f);
+			if(checkKeyRandom.instance.checkKey(positionSpaw))
+			{
+				Instantiate(key , positionSpaw,Quaternion.identity);
+			}
+			else
+				i--;
+		}
 	}
+
 
 	public void setIsTrigger(){
 		myCollider.isTrigger = true;
